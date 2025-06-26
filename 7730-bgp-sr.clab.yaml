@@ -1,0 +1,33 @@
+name: 7730-bgp-sr
+
+topology:
+  kinds:
+    srl:
+      image: ghcr.io/nokia/srlinux
+      license: ../srl_r24_license.key
+    nokia_sros:
+      image: vrnetlab/nokia_sros:24.10.R2
+      license: ../license-sros-24.txt
+  nodes:
+    7730-32d:
+      kind: srl
+      type: sxr1d32d
+    mpls-pe1:
+      kind: nokia_sros
+      type: sr-1
+    mpls-pe2:
+      kind: nokia_sros
+      type: sr-1
+    mpls-pe3:
+      kind: nokia_sros
+      type: sr-1
+    bgp-ce:
+      kind: nokia_sros
+      type: sr-1
+  links:
+    - endpoints: ["7730-32d:e1-1", "mpls-pe1:eth1"]
+    - endpoints: ["7730-32d:e1-2", "bgp-ce:eth1"]
+    - endpoints: ["7730-32d:e1-3", "mpls-pe2:eth1"]
+    - endpoints: ["mpls-pe1:eth2", "mpls-pe2:eth2"]
+    - endpoints: ["mpls-pe1:eth3", "mpls-pe3:eth1"]
+    - endpoints: ["mpls-pe2:eth3", "mpls-pe3:eth2"]

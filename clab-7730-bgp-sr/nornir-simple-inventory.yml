@@ -1,0 +1,26 @@
+---
+bgp-ce:
+    username: admin
+    password: admin
+    platform: nokia_sros
+    hostname: 172.20.20.2
+mpls-pe1:
+    username: admin
+    password: admin
+    platform: nokia_sros
+    hostname: 172.20.20.3
+mpls-pe2:
+    username: admin
+    password: admin
+    platform: nokia_sros
+    hostname: 172.20.20.6
+mpls-pe3:
+    username: admin
+    password: admin
+    platform: nokia_sros
+    hostname: 172.20.20.4
+7730-32d:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.5

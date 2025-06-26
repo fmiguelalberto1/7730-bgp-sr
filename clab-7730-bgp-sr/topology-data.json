@@ -1,0 +1,263 @@
+{
+  "name": "7730-bgp-sr",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-8e5ed73c83fc",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "7730-32d": {
+      "index": "0",
+      "shortname": "7730-32d",
+      "longname": "clab-7730-bgp-sr-7730-32d",
+      "fqdn": "7730-32d.7730-bgp-sr.io",
+      "group": "",
+      "labdir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/7730-32d",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:d5:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8e5ed73c83fc",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/7730-32d",
+        "clab-node-longname": "clab-7730-bgp-sr-7730-32d",
+        "clab-node-name": "7730-32d",
+        "clab-node-type": "sxr1d32d",
+        "clab-owner": "miguel",
+        "clab-topo-file": "/home/miguel/clab/7730-bgp-sr/7730-bgp-sr.clab.yaml",
+        "containerlab": "7730-bgp-sr"
+      },
+      "port-bindings": [
+      ]
+    },
+    "bgp-ce": {
+      "index": "1",
+      "shortname": "bgp-ce",
+      "longname": "clab-7730-bgp-sr-bgp-ce",
+      "fqdn": "bgp-ce.7730-bgp-sr.io",
+      "group": "",
+      "labdir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/bgp-ce",
+      "kind": "nokia_sros",
+      "image": "vrnetlab/nokia_sros:24.10.R2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8e5ed73c83fc",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_sros",
+        "clab-node-lab-dir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/bgp-ce",
+        "clab-node-longname": "clab-7730-bgp-sr-bgp-ce",
+        "clab-node-name": "bgp-ce",
+        "clab-node-type": "sr-1",
+        "clab-owner": "miguel",
+        "clab-topo-file": "/home/miguel/clab/7730-bgp-sr/7730-bgp-sr.clab.yaml",
+        "containerlab": "7730-bgp-sr"
+      },
+      "port-bindings": [
+      ]
+    },
+    "mpls-pe1": {
+      "index": "2",
+      "shortname": "mpls-pe1",
+      "longname": "clab-7730-bgp-sr-mpls-pe1",
+      "fqdn": "mpls-pe1.7730-bgp-sr.io",
+      "group": "",
+      "labdir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/mpls-pe1",
+      "kind": "nokia_sros",
+      "image": "vrnetlab/nokia_sros:24.10.R2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8e5ed73c83fc",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_sros",
+        "clab-node-lab-dir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/mpls-pe1",
+        "clab-node-longname": "clab-7730-bgp-sr-mpls-pe1",
+        "clab-node-name": "mpls-pe1",
+        "clab-node-type": "sr-1",
+        "clab-owner": "miguel",
+        "clab-topo-file": "/home/miguel/clab/7730-bgp-sr/7730-bgp-sr.clab.yaml",
+        "containerlab": "7730-bgp-sr"
+      },
+      "port-bindings": [
+      ]
+    },
+    "mpls-pe2": {
+      "index": "3",
+      "shortname": "mpls-pe2",
+      "longname": "clab-7730-bgp-sr-mpls-pe2",
+      "fqdn": "mpls-pe2.7730-bgp-sr.io",
+      "group": "",
+      "labdir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/mpls-pe2",
+      "kind": "nokia_sros",
+      "image": "vrnetlab/nokia_sros:24.10.R2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8e5ed73c83fc",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_sros",
+        "clab-node-lab-dir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/mpls-pe2",
+        "clab-node-longname": "clab-7730-bgp-sr-mpls-pe2",
+        "clab-node-name": "mpls-pe2",
+        "clab-node-type": "sr-1",
+        "clab-owner": "miguel",
+        "clab-topo-file": "/home/miguel/clab/7730-bgp-sr/7730-bgp-sr.clab.yaml",
+        "containerlab": "7730-bgp-sr"
+      },
+      "port-bindings": [
+      ]
+    },
+    "mpls-pe3": {
+      "index": "4",
+      "shortname": "mpls-pe3",
+      "longname": "clab-7730-bgp-sr-mpls-pe3",
+      "fqdn": "mpls-pe3.7730-bgp-sr.io",
+      "group": "",
+      "labdir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/mpls-pe3",
+      "kind": "nokia_sros",
+      "image": "vrnetlab/nokia_sros:24.10.R2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8e5ed73c83fc",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_sros",
+        "clab-node-lab-dir": "/home/miguel/clab/7730-bgp-sr/clab-7730-bgp-sr/mpls-pe3",
+        "clab-node-longname": "clab-7730-bgp-sr-mpls-pe3",
+        "clab-node-name": "mpls-pe3",
+        "clab-node-type": "sr-1",
+        "clab-owner": "miguel",
+        "clab-topo-file": "/home/miguel/clab/7730-bgp-sr/7730-bgp-sr.clab.yaml",
+        "containerlab": "7730-bgp-sr"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "7730-32d",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:e0:d8:54",
+        "peer": "z"
+      },
+      "z": {
+        "node": "mpls-pe1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ee:bf:cf",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "7730-32d",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:f1:a6:82",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bgp-ce",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:a5:37:5b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "7730-32d",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:6e:f8:a7",
+        "peer": "z"
+      },
+      "z": {
+        "node": "mpls-pe2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:44:81:6a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "mpls-pe1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:94:02:6a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "mpls-pe2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a3:a4:0d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "mpls-pe1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:c5:83:36",
+        "peer": "z"
+      },
+      "z": {
+        "node": "mpls-pe3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:26:2b:be",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "mpls-pe2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:86:6c:08",
+        "peer": "z"
+      },
+      "z": {
+        "node": "mpls-pe3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:0a:ee:e3",
+        "peer": "a"
+      }
+    }
+  ]
+}
